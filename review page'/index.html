@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Review Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Review the content</h1>
+    <div id="video-container">
+      <!-- Embed your video here -->
+      <iframe width="700" height="400" src="https://www.youtube.com/embed/w90L_1cRcgM?si=gyvQCn1SPRQ-C6WV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div id="reviews"></div>
+    <div class="view-buttons">
+      <button id="comment-view" class="btn active-view">Comment Section</button>
+      <button id="rating-view" class="btn">Rating</button>
+      <button id="suggestion-view" class="btn">Suggestions</button>
+    </div>
+    <div id="comment-section" class="review-section">
+      <form class="review-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <textarea id="comment" placeholder="Your Comment" required></textarea>
+        <div class="submit-button">
+          <button type="button" id="submit-comment" class="btn">Submit Comment</button>
+        </div>
+      </form>
+    </div>
+    <div id="rating-section" class="review-section" style="display: none;">
+      <h2>Leave a Rating</h2>
+      <div class="rating-types">
+        <div class="rating-type">
+          <h3>Content Understanding</h3>
+          <div id="content-rating" class="smileys"></div>
+        </div>
+        <div class="rating-type">
+          <h3>Video Quality</h3>
+          <div id="video-quality-rating" class="smileys"></div>
+        </div>
+        <div class="rating-type">
+          <h3>Overall Experience</h3>
+          <div id="overall-rating" class="smileys"></div>
+        </div>
+      </div>
+      <div class="submit-button">
+        <button type="button" id="submit-rating" class="btn">Submit Rating</button>
+      </div>
+    </div>
+    <div id="suggestion-section" class="review-section" style="display: none;">
+      <form class="review-form">
+        <textarea id="suggestion" placeholder="Your Suggestion" required></textarea>
+        <div class="submit-button">
+          <button type="button" id="submit-suggestion" class="btn">Submit Suggestion</button>
+        </div>
+      </form>
+    </div>
+    <div class="reviews-container">
+        <div class="review-card">
+          <div class="review-header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg" alt="Profile Picture" class="profile-picture">
+            <div class="reviewer-info">
+              <h3 class="reviewer-name">John Doe</h3>
+              <p class="review-date">May 10, 2023</p>
+            </div>
+          </div>
+          <div class="review-content">
+            <p>This video was really helpful in understanding the topic. The explanations were clear and concise.</p>
+          </div>
+        </div>
+      
+        <div class="review-card">
+          <div class="review-header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg" alt="Profile Picture" class="profile-picture">
+            <div class="reviewer-info">
+              <h3 class="reviewer-name">Jane Smith</h3>
+              <p class="review-date">April 20, 2023</p>
+            </div>
+          </div>
+          <div class="review-content">
+            <p>The video quality could have been better, but the content was excellent. I learned a lot from this video.</p>
+          </div>
+        </div>
+      
+        <div class="review-card">
+          <div class="review-header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg" alt="Profile Picture" class="profile-picture">
+            <div class="reviewer-info">
+              <h3 class="reviewer-name">Rick</h3>
+              <p class="review-date">May 10, 2023</p>
+            </div>
+          </div>
+          <div class="review-content">
+            <p>The video was excellent. I learned a lot from this video.</p>
+          </div>
+        </div>
+      
+        <div class="review-card">
+          <div class="review-header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/694px-Unknown_person.jpg" alt="Profile Picture" class="profile-picture">
+            <div class="reviewer-info">
+              <h3 class="reviewer-name">James</h3>
+              <p class="review-date">May 10, 2023</p>
+            </div>
+          </div>
+          <div class="review-content">
+            <p>The video quality could have been better, but the content was excellent. I learned a lot from this video.</p>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
